@@ -4,6 +4,7 @@ import Navbar from './Pages/Shared/Navbar';
 import Home from './Pages/Home/Home';
 import Tools from './Pages/Home/Tools';
 import Review from './Pages/Home/Review';
+import Info from './Pages/Home/Info';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/tools' element={<Tools></Tools>}></Route>
         <Route path='/review' element={<Review></Review>}></Route>
+        <Route path='/info' element={<Info></Info>}></Route>
 
       </Routes>
 
