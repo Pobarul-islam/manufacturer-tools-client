@@ -9,7 +9,7 @@ const Tools = () => {
         fetch("service.json")
             .then(res => res.json())
             .then(data => setTools(data))
-        // console.log(setTools)
+
     }, [])
     return (
         <div className='mt-20'>

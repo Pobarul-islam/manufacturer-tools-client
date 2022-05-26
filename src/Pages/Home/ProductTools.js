@@ -5,7 +5,7 @@ import '../Home/Tools.css'
 
 const ProducTools = ({ user, handleControl }) => {
     // console.log(user)
-    const { _id, name, img, price, description, quantity, Information } = user || {};
+    const { _id, name, img, Available, description, MinimumOrder, PerPrice, Information } = user || {};
     const handleProductDelete = id => {
         const proced = window.confirm('Are You Sure? You Want to Delete?')
 
@@ -33,10 +33,14 @@ const ProducTools = ({ user, handleControl }) => {
                 <div class="card card-compact w-96 bg-base-100 shadow-xl toolsCard">
                     <figure><img className='w-20' src={img} alt="Shoes" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">{name}</h2>
+                        <h2 class="card-title">Name: {name}</h2>
+                        <p>Information: {Information}</p>
+                        <p>Minimun Order: {MinimumOrder}</p>
+                        <p>Available: {Available}</p>
+                        <p>Per Price: {PerPrice}</p>
                         <p>{description}</p>
-                        <p>{Information}</p>
-                        <div class="card-actions justify-end">
+
+                        <div class="card-actions justify-center">
                             <Link to="/purchase" class="btn btn-primary">Buy Now</Link>
                         </div>
                     </div>
