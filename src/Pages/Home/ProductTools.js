@@ -27,23 +27,25 @@ const ProducTools = ({ user, handleControl }) => {
 
     }
     return (
-        <div className='' >
+        <div>
 
-            <div class="card card-compact w-96 bg-base-100 shadow-xl toolsCard">
-                <figure><img src={img} alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{name}</h2>
-                    <p>{description}</p>
-                    <p>{Information}</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+            <div className='mt-20' >
+                <div class="card card-compact w-96 bg-base-100 shadow-xl toolsCard">
+                    <figure><img className='w-20' src={img} alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">{name}</h2>
+                        <p>{description}</p>
+                        <p>{Information}</p>
+                        <div class="card-actions justify-end">
+                            <Link to="/purchase" class="btn btn-primary">Buy Now</Link>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            {/* 
+                {/* 
             <Button onClick={() => handleProductDelete(user._id)} className='btn btn-danger me-'>Delete</Button> */}
+            </div>
         </div>
     );
 };

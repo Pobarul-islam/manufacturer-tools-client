@@ -12,15 +12,14 @@ const Tools = () => {
         // console.log(setTools)
     }, [])
     return (
-        <div>
+        <div className='mt-20'>
+            <h2 className='text-4xl font-bold'>Tools/Parts</h2>
+            <div className='grid grid-cols-3 gap-4'>
+                {
+                    tools?.map(user => <ProducTools key={user._id} user={user}></ProducTools>)
+                }
 
-            {
-                tools?.map(user => <ProducTools key={user._id} user={user}></ProducTools>)
-
-
-
-            }
-
+            </div>
         </div>
     );
 };
