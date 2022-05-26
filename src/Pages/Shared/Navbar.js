@@ -5,7 +5,6 @@ import React from 'react';
 const Navbar = () => {
     const menuItems = <>
         <li><a to="/">Home</a></li>
-        <li><a to="/appointment">Appointment</a></li>
         <li><a to="/review">Review</a></li>
         <li><a to="/contact">Contact</a></li>
         <li><a to="/about">About</a></li>
