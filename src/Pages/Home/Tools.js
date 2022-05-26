@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import ProducTools from './ProductTools';
+
 
 const Tools = () => {
 
+    const [tools, setTools] = useState([])
+    useEffect(() => {
+        fetch("service.json")
+            .then(res => res.json())
+            .then(data => setTools(data))
+        // console.log(setTools)
+    }, [])
     return (
         <div>
 
-            <h1>Hello world</h1>
+            {
+                tools?.map(user => <ProducTools key={user._id} user={user}></ProducTools>)
+
+
+
+            }
 
         </div>
     );
