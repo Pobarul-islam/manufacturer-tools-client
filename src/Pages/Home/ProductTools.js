@@ -30,18 +30,18 @@ const ProducTools = ({ user, handleControl }) => {
         <div>
 
             <div className='mt-20' >
-                <div class="card card-compact w-96 bg-base-100 shadow-xl toolsCard">
+                <div className="card card-compact w-96 bg-base-100 shadow-xl toolsCard">
                     <figure><img className='w-20' src={img} alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Name: {name}</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">Name: {name}</h2>
                         <p>Information: {Information}</p>
                         <p>Minimun Order: {MinimumOrder}</p>
                         <p>Available: {Available}</p>
                         <p>Per Price: {PerPrice}</p>
                         <p>{description}</p>
 
-                        <div class="card-actions justify-center">
-                            <Link to="/purchase" class="btn btn-primary">Buy Now</Link>
+                        <div className="card-actions justify-center">
+                            <Link to="/purchase" className="btn btn-primary">Buy Now</Link>
                         </div>
                     </div>
                 </div>
