@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -73,6 +74,8 @@ const Login = () => {
 
                         <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
                     </form>
+
+                    <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
 
                     <div className="divider">OR</div>
                     <button
