@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "ENGINE DIAGNOSTIC",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "name": "WHEEL ALIGNMENT",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
@@ -22,7 +22,7 @@
     {
         "id": 3,
         "name": "OIL CHANGING",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "name": "BRAKE REPARING",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "name": "WASH AND GLASSING",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
@@ -52,7 +52,7 @@
     {
         "id": 6,
         "name": "COMPLETE ANALYSIS",
-        "MinimunOrder": "300",
+        "MinimumOrder": 45,
         "Available": 50,
         "PerPrice": 400,
         "Information": "Model:30010",
