@@ -8,9 +8,9 @@ const Info = () => {
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
-            <InfoCard cardTitle="Opening Hours" bgClass="bg-primary" img={clock}></InfoCard>
-            <InfoCard cardTitle="Our Locations" bgClass="bg-accent" img={marker}></InfoCard>
-            <InfoCard cardTitle="Contact Us" bgClass="bg-primary" img={phone}></InfoCard>
+            <InfoCard cardTitle="Opening Hours" bgclassName="bg-primary" img={clock}></InfoCard>
+            <InfoCard cardTitle="Our Locations" bgclassName="bg-accent" img={marker}></InfoCard>
+            <InfoCard cardTitle="Contact Us" bgclassName="bg-primary" img={phone}></InfoCard>
         </div>
     );
 };

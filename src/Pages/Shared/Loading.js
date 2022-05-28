@@ -4,7 +4,7 @@ const Loading = () => {
     return (
         <div className="flex items-center justify-center ">
             <div className=""></div>
-            <button class="btn loading bg-primary mt-20">loading</button>
+            <button className="btn loading bg-primary mt-20">loading</button>
         </div>
     );
 };
