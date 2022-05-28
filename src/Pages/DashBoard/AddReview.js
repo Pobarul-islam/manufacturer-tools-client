@@ -10,7 +10,7 @@ class Review extends Component {
 
                     {this.getDate(this.props.review.date)}
 
-                    <h2>hello</h2>
+
                     <div className="review__rating">
                         {this.getStar(1)}
                         {this.getStar(2)}
