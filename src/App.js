@@ -12,6 +12,7 @@ import DashBoard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import AddReview from './Pages/DashBoard/AddReview';
 import MyProfile from './Pages/DashBoard/MyProfile';
+import Blog from './Components/Blogs';
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path='/review' element={<AddReview></AddReview>}></Route>
         <Route path='/profile' element={<MyProfile></MyProfile>}></Route>
         <Route path='/userdetails' element={<UserDetails></UserDetails>}></Route>
+        <Route path='/blogs' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
