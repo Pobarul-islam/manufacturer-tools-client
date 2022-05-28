@@ -17,6 +17,7 @@ const Purchase = () => {
 
                 ></Tools>)
             }
+            <h3>hello</h3>
         </div>
     );
 };
