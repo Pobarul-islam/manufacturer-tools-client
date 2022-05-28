@@ -1,77 +1,53 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import ManageProducts from './Component/Dashboard/ManageProduct';
-import Dashboard from './Component/Dashboard/Dashboard';
-import Footer from './Component/Footer/Footer';
-import Home from './Component/Home/Home';
-import Navbar from './Component/Navbar/Navbar';
-import Product from './Component/Product/Product';
-import Login from './Component/User/Login';
-import Register from './Component/User/Register';
-import AddProduct from './Component/Dashboard/AddProduct';
-import ProductDetails from './Component/Product/ProductDetails';
-import Orders from './Component/Dashboard/Orders';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Payment from './Component/Dashboard/Payment';
-import Reviews from './Component/Review/Reviews';
-import RequireAuth from './Component/RequireAuth/RequireAuth';
-import AllUsers from './Component/Dashboard/AllUsers';
-import About from './Component/About/About';
-import AddReview from './Component/Review/AddReview';
-import Contact from './Component/Contact/Contact';
-import Portfolio from './Component/Portfolio/Portfolio';
-import Profile from './Component/Dashboard/Profile';
-import AllOrders from './Component/Dashboard/AllOrders';
-import Blog from './Component/Blog/Blog';
-import useUser from './Component/Hook/useUser';
+import { signOut } from 'firebase/auth';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 
-function App() {
 
-  const [currentUser] = useUser()
-  const show = true
+const Navbar = () => {
+
+  const [user] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+  };
+
+  const menuItems = <>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/appointment">Appointment</Link></li>
+    <li><Link to="/review">Review</Link></li>
+    <li><Link to="/contact">Contact</Link></li>
+    <li><Link to="/about">About</Link></li>
+    {
+      user && <li><Link to="/dashboard">Dashboard</Link></li>
+    }
+    <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+  </>
   return (
-    <div className="App">
-      <Navbar />
-      <div className="p-5 lg:p-0">
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='*' element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/review' element={<Reviews />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/blogs' element={<Blog />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/product' element={<Product />} />
-          <Route path='/product/:id' element={<RequireAuth>
-            <ProductDetails />
-          </RequireAuth>} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/dashboard' element={<RequireAuth>
-            <Dashboard />
-          </RequireAuth>}>
-            <Route index element={currentUser?.role === "admin" ? <AllOrders /> : <Orders />} />
-            <Route path='orders' element={currentUser?.role === "admin" ? <AllOrders /> : <Orders />} />
-            <Route path='profile' element={<Profile />} />
-            <Route path='payment' element={<Payment />} />
-            <Route path='review' element={<AddReview show={show} />} />
-            {
-              currentUser?.role === "admin" &&
-              <>
-                <Route path='products-add' element={<AddProduct />} />
-                <Route path='products-manage' element={<ManageProducts />} />
-                <Route path='all-users' element={<AllUsers />} />
-              </>
-            }
-          </Route>
-        </Routes>
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <label tabIndex="0" className="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            {menuItems}
+          </ul>
+        </div>
+        <a className="btn btn-ghost normal-case text-xl">Doctors Portal</a>
       </div>
-      <ToastContainer />
-      <Footer />
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">
+          {menuItems}
+        </ul>
+      </div>
+      <div className="navbar-end">
+        <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        </label>
+      </div>
     </div>
   );
-}
+};
 
-export default App;
+export default Navbar;
