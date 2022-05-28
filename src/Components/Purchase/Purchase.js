@@ -1,35 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../Purchase/Purchase.css';
 
 const Purchase = () => {
+
+    const [counter, setCounter] = useState(56);
+
+    //increase counter
+    const increase = () => {
+        setCounter(count => count + 1);
+    };
+
+    //decrease counter
+    const decrease = () => {
+        setCounter(count => count - 1);
+    };
+
+    //reset counter 
+    const reset = () => {
+        setCounter(0)
+    }
+
+
     return (
-        <div>
-            <div className='flex h-screen justify-center items-center'>
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <div className="card-body">
-                        <h2 className="text-center text-2xl font-bold">Quantity: 50</h2>
-                        <form>
-
-
-                            <div className="form-control w-full max-w-xs">
-
-                                <input
-                                    type="text"
-                                    placeholder="Quantity"
-                                    className="input input-bordered w-full max-w-xs"
-
-                                />
-
-                            </div>
-
-
-                            <input className='btn w-full max-w-xs mt-5 w-20 text-white' type="submit" value="Submit" />
-                        </form>
-
-
-
-                    </div>
-                </div>
-            </div >
+        <div className="counter">
+            <h1>React Counter</h1>
+            <span className="counter__output">{counter}</span>
+            <div className="btn__container">
+                <button className="control__btn" onClick={increase}>+</button>
+                <button className="control__btn" onClick={decrease}>-</button>
+                <button className="reset" onClick={reset}>Reset</button>
+            </div>
         </div>
     );
 };
