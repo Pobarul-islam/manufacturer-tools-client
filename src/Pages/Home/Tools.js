@@ -6,7 +6,8 @@ const Tools = () => {
     useEffect(() => {
         fetch('http://localhost:5000/tools')
             .then(res => res.json())
-            .then(data => setTools(data))
+            .then(data => { console.log(data); setTools(data) })
+
     }, [])
 
     return (
@@ -16,7 +17,7 @@ const Tools = () => {
 
             <div className='flex grid grid-cols-3 mt-20 gap-10'>
                 {
-                    tools.map(tool => <ProductTools
+                    tools.slice(0, 5).map(tool => <ProductTools
                         key={tool.id}
                         tool={tool}
                     ></ProductTools>)

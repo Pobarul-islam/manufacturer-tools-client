@@ -1,11 +1,12 @@
 import React from 'react';
+import Products from '../Products/Products';
 import Banner from './Banner';
 import Footer from './Footer';
 import Info from './Info';
-import ProducTools from './ProductTools';
+// import ProducTools from './ProductTools';
 
 import Review from './Review';
-import Tools from './Tools';
+// import Tools from './Tools';
 
 
 const Home = () => {
@@ -14,9 +15,10 @@ const Home = () => {
             <Banner></Banner>
             <Info></Info>
             <Review></Review>
+            <Products></Products>
 
-            <Tools></Tools>
-            <ProducTools></ProducTools>
+            {/* <Tools></Tools>
+            <ProducTools></ProducTools> */}
 
             <Footer></Footer>
         </div>
