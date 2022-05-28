@@ -4,7 +4,7 @@ const ProductCard = ({ tool }) => {
     return (
         <div className=''>
             <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src={tool?.img} alt="Shoes" /></figure>
+                <figure><img className='w-20' src={tool?.img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{tool?.name}</h2>
                     <p>{tool?.description}</p>

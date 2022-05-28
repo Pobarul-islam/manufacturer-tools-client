@@ -13,12 +13,15 @@ const Tools = () => {
         <div>
             <h2>Tools: {tools.length}</h2>
 
-            {
-                tools.map(tool => <ProductTools
-                    key={tool.id}
-                    tool={tool}
-                ></ProductTools>)
-            }
+
+            <div className='flex grid grid-cols-3 mt-20 gap-10'>
+                {
+                    tools.map(tool => <ProductTools
+                        key={tool.id}
+                        tool={tool}
+                    ></ProductTools>)
+                }
+            </div>
         </div>
     );
 };
