@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import Tools from '../Home/Tools';
+
+
 const Purchase = () => {
-    const [product, setProduct] = useState([]);
-    useEffect(() => {
-        fetch('service.json')
-            .then(res => res.json())
-            .then(data => setProduct(data))
-    }, [])
     return (
         <div>
-            <h2>Product {product.length}</h2>
+            <h2>Purchase page</h2>
+            <Tools></Tools>
         </div>
     );
 };

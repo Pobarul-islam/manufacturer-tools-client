@@ -13,6 +13,7 @@ import MyOrders from './Pages/DashBoard/MyOrders';
 import AddReview from './Pages/DashBoard/AddReview';
 import MyProfile from './Pages/DashBoard/MyProfile';
 import Blogs from './Blogs/Blogs';
+import Addproduct from './Pages/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -41,7 +42,11 @@ function App() {
         </Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-
+        <Route path='/addproduct' element={
+          <RequireAuth>
+            <Addproduct></Addproduct>
+          </RequireAuth>
+        }></Route>
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
