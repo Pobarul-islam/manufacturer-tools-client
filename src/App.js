@@ -12,6 +12,7 @@ import Dashboard from './Pages/DashBoard/DashBoard';
 import MyOrders from './Pages/DashBoard/MyOrders';
 import AddReview from './Pages/DashBoard/AddReview';
 import MyProfile from './Pages/DashBoard/MyProfile';
+import Blogs from './Blogs/Blogs';
 
 function App() {
   return (
@@ -39,10 +40,7 @@ function App() {
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
         </Route>
 
-
-
-
-
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
