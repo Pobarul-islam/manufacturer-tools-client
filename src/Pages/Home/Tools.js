@@ -15,7 +15,7 @@ const Tools = () => {
 
             {
                 tools.map(tool => <ProductTools
-                    key={tool._id}
+                    key={tool.id}
                     tool={tool}
                 ></ProductTools>)
             }

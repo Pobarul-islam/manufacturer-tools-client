@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import Tools from './Tools';
-
 const Purchase = () => {
-    const [services, setService] = useState([])
+    const [product, setProduct] = useState([]);
     useEffect(() => {
         fetch('service.json')
             .then(res => res.json())
-            .then(data => setService(data))
+            .then(data => setProduct(data))
     }, [])
     return (
         <div>
-
-            {
-                services.map(service => <Tools
-                    key={Tools._id}
-
-                ></Tools>)
-            }
-            <h3>hello</h3>
+            <h2>Product {product.length}</h2>
         </div>
     );
 };

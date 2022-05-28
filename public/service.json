@@ -58,5 +58,65 @@
         "Information": "Model:30010",
         "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
         "img": "https://i.ibb.co/KqTQsL8/tools-6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "ENGINE DIAGNOSTIC",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Replacement of blades for cutter. Pack of 10 SK5 blades of size 61x19 mm. For TOLSEN 30007, 30008 and 30009 model cutter. Robust tools from the Tolsen brand, manufacturer of quality professional tools.",
+        "img": "https://i.ibb.co/r5yWCDn/tools-1.jpg"
+    },
+    {
+        "id": 8,
+        "name": "WHEEL ALIGNMENT",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/xH4hR7Z/tools-2.jpg"
+    },
+    {
+        "id": 9,
+        "name": "OIL CHANGING",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/y5jsMB5/tools-3.jpg"
+    },
+    {
+        "id": 10,
+        "name": "BRAKE REPARING",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/z26Hnc5/tools-4.jpg"
+    },
+    {
+        "id": 11,
+        "name": "WASH AND GLASSING",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://i.ibb.co/8Yy2hY8/tools-5.jpg"
+    },
+    {
+        "id": 12,
+        "name": "COMPLETE ANALYSIS",
+        "MinimumOrder": 45,
+        "Available": 50,
+        "PerPrice": 400,
+        "Information": "Model:30010",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://i.ibb.co/KqTQsL8/tools-6.jpg"
     }
 ]

@@ -1,10 +1,11 @@
 import React from 'react';
+import InfoCard from './InfoCard';
+import ProductCard from './ProductCard';
 
 const ProductTools = ({ tool }) => {
-
     return (
-        <div>
-            <h2>Name: {name}</h2>
+        <div className='grid grid-cols-3 gap-4'>
+            <ProductCard tool={tool} />
         </div>
     );
 };

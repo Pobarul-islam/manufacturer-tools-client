@@ -18,8 +18,10 @@ function App() {
 
 
         <Route path='/purchase' element={<Purchase></Purchase>}></Route>
-        <Route path="login" element={<Login />} />
-        <Route path='signup' element={<SignUp></SignUp>}></Route>
+
+        <Route path="/login" element={<Login />} />
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+
 
       </Routes>
     </div>
