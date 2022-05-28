@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ProductCard = ({ tool }) => {
+
     return (
         <div className=''>
             <div className="card w-96 bg-base-100 shadow-xl">
