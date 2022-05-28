@@ -1,51 +1,75 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './Pages/Shared/Navbar';
-import Home from './Pages/Home/Home';
-import Purchase from './Components/Purchase/Purchase';
-import Login from '../src/Login/Login';
-import SignUp from './Login/Signup';
-
-import RequireAuth from './Login/RequireAuth';
-import UserDetails from './Components/Purchase/Purchase';
-import DashBoard from './Pages/DashBoard/DashBoard';
-import MyOrders from './Pages/DashBoard/MyOrders';
-import AddReview from './Pages/DashBoard/AddReview';
-import MyProfile from './Pages/DashBoard/MyProfile';
-
-
-
+import ManageProducts from './Component/Dashboard/ManageProduct';
+import Dashboard from './Component/Dashboard/Dashboard';
+import Footer from './Component/Footer/Footer';
+import Home from './Component/Home/Home';
+import Navbar from './Component/Navbar/Navbar';
+import Product from './Component/Product/Product';
+import Login from './Component/User/Login';
+import Register from './Component/User/Register';
+import AddProduct from './Component/Dashboard/AddProduct';
+import ProductDetails from './Component/Product/ProductDetails';
+import Orders from './Component/Dashboard/Orders';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Payment from './Component/Dashboard/Payment';
+import Reviews from './Component/Review/Reviews';
+import RequireAuth from './Component/RequireAuth/RequireAuth';
+import AllUsers from './Component/Dashboard/AllUsers';
+import About from './Component/About/About';
+import AddReview from './Component/Review/AddReview';
+import Contact from './Component/Contact/Contact';
+import Portfolio from './Component/Portfolio/Portfolio';
+import Profile from './Component/Dashboard/Profile';
+import AllOrders from './Component/Dashboard/AllOrders';
+import Blog from './Component/Blog/Blog';
+import useUser from './Component/Hook/useUser';
 
 function App() {
+
+  const [currentUser] = useUser()
+  const show = true
   return (
     <div className="App">
-      <Navbar></Navbar>
-
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/purchase' element={
-          <RequireAuth>
-            <Purchase></Purchase>
-          </RequireAuth>
-        }></Route>
-        <Route path='/dashboard' element={
-          <RequireAuth>
-            <DashBoard></DashBoard>
-          </RequireAuth>
-        }>
-
-        </Route>
-        <Route path='/myorders' element={<MyOrders></MyOrders>}></Route>
-        <Route path='/review' element={<AddReview></AddReview>}></Route>
-        <Route path='/profile' element={<MyProfile></MyProfile>}></Route>
-        <Route path='/userdetails' element={<UserDetails></UserDetails>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/signup' element={<SignUp></SignUp>}></Route>
-
-
-
-      </Routes>
-
+      <Navbar />
+      <div className="p-5 lg:p-0">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/review' element={<Reviews />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/blogs' element={<Blog />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/product' element={<Product />} />
+          <Route path='/product/:id' element={<RequireAuth>
+            <ProductDetails />
+          </RequireAuth>} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<RequireAuth>
+            <Dashboard />
+          </RequireAuth>}>
+            <Route index element={currentUser?.role === "admin" ? <AllOrders /> : <Orders />} />
+            <Route path='orders' element={currentUser?.role === "admin" ? <AllOrders /> : <Orders />} />
+            <Route path='profile' element={<Profile />} />
+            <Route path='payment' element={<Payment />} />
+            <Route path='review' element={<AddReview show={show} />} />
+            {
+              currentUser?.role === "admin" &&
+              <>
+                <Route path='products-add' element={<AddProduct />} />
+                <Route path='products-manage' element={<ManageProducts />} />
+                <Route path='all-users' element={<AllUsers />} />
+              </>
+            }
+          </Route>
+        </Routes>
+      </div>
+      <ToastContainer />
+      <Footer />
     </div>
   );
 }
