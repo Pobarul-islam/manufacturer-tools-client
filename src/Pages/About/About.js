@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+<<<<<<< HEAD:src/Pages/DashBoard/AddReview.js
 class Review extends Component {
     render() {
 
@@ -49,3 +50,14 @@ class Review extends Component {
 }
 
 export default Review;
+=======
+const About = () => {
+    return (
+        <div>
+            <h2>This is About</h2>
+        </div>
+    );
+};
+
+export default About;
+>>>>>>> 2713277e7a294e252ba05648e7f2da38653bdd2f:src/Pages/About/About.js

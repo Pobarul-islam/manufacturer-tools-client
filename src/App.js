@@ -1,7 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
+import { Routes, Route, Link } from "react-router-dom";
 import Home from './Pages/Home/Home';
+<<<<<<< HEAD
 import Purchase from './Components/Purchase/Purchase';
 import Login from '../src/Login/Login';
 import SignUp from './Login/Signup';
@@ -16,13 +17,19 @@ import Blog from './Components/Blogs';
 
 
 
+=======
+import About from './Pages/About/About';
+import Login from './Pages/Login/Login';
+import Purchase from './Pages/Purchase/Purchase';
+import SignUp from './Pages/Login/Signup';
+>>>>>>> 2713277e7a294e252ba05648e7f2da38653bdd2f
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar></Navbar>
-
       <Routes>
+<<<<<<< HEAD
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/purchase' element={
           <RequireAuth>
@@ -45,9 +52,15 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
 
 
+=======
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+>>>>>>> 2713277e7a294e252ba05648e7f2da38653bdd2f
 
+        <Route path='/purchase' element={<Purchase></Purchase>}></Route>
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
       </Routes>
-
     </div>
   );
 }
