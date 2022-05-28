@@ -3,6 +3,7 @@ import React from 'react'
 const Blog = () => {
     return (
         <div className='container mx-auto my-14 grid grid-cols-1 gap-10 lg:grid-cols-2'>
+            <h2>hello</h2>
             <div>
                 <h1 className='text-3xl'>Improve the performance of a React Application</h1>
                 <p className='mt-5'>If you’re benchmarking or experiencing performance problems in your React apps, make sure you’re testing with the minified production build.</p>

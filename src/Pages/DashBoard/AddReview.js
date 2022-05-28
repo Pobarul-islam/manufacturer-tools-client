@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Review extends Component {
     render() {
+
         return (
             <li key={this.props.index} className="reviews__list-item reset-list block-padding-vertical">
                 <div className="review area">
@@ -9,6 +10,7 @@ class Review extends Component {
 
                     {this.getDate(this.props.review.date)}
 
+                    <h2>hello</h2>
                     <div className="review__rating">
                         {this.getStar(1)}
                         {this.getStar(2)}
