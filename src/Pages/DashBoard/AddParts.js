@@ -185,8 +185,8 @@ const AddParts = () => {
 
                     <div className="form-control ">
 
-                        <label class="block">
-                            <span class="sr-only">Choose profile photo</span>
+                        <label className="block">
+                            <span className="sr-only">Choose profile photo</span>
                             <input
                                 {...register("image", {
                                     required: {
@@ -196,7 +196,7 @@ const AddParts = () => {
 
                                 })}
                                 type="file"
-                                class="text-sm text-white text-bold 
+                                className="text-sm text-white text-bold 
                                     file:mr-4 file:py-2 file:px-4
                                     file:rounded-full file:border-0
                                     file:text-sm file:font-semibold

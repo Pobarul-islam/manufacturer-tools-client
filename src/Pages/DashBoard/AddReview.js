@@ -1,147 +1,118 @@
-// import React from 'react';
-// import { useForm } from 'react-hook-form';
-// import { toast } from 'react-toastify';
-// const AddReview = () => {
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
+const AddReview = () => {
+    const [user, loading] = useAuthState(auth)
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-//     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-//     const imageStorageKey = '0a59feb260123c2fe0c722a3e3da90f9';
+    const onSubmit = async (data) => {
+        const image = user.photoURL
+        const ratingData = { ...data, image }
+        fetch('http://localhost:5000/review', {
+            method: 'post',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(ratingData)
+        }).then(res => {
+            toast.success('review Added')
+            reset()
+        })
 
-//     const onSubmit = async (data) => {
-    
-              
+    };
+    return (
+        <div className='bg-[#677E81] py-10 h-screen'>
+            <h1 className='text-2xl text-center text-white mb-3 uppercase'>Please add a review </h1>
+            <div className='w-[30%] mx-auto card shadow-2xl border md:p-10 p-3'>
+                <form onSubmit={handleSubmit(onSubmit)}>
 
-//                     const img = result.data.url;
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Name</span>
+                        </label>
+                        <input
+                            {...register("name", {
+                                required: {
+                                    value: true,
+                                    message: 'Name is Required'
+                                },
 
-//                     const review =
-//                     {
+                            })}
+                            type="name"
+                            placeholder="Enter your name"
+                            className="input input-bordered" />
 
-//                         name: data.name,
-//                         review: data.review,
-//                         img: img,
-//                         ratings: data.ratings
-//                     }
-//                     if (data.ratings > 5 || data.ratings < 1) {
-//                         toast('Please provide rating between 1 to 5')
-//                         return;
-//                     }
-//                     fetch('', {
+                        <label className="label">
+                            {errors.name?.type === 'required' && <span className="label-text-alt text-warning">{errors.name?.message}</span>}
 
-//                         method: 'POST',
-//                         headers: {
-//                             'Content-type': 'application/json',
-//                         },
-//                         body: JSON.stringify(review),
-//                     })
-//                         .then((res) => res.json())
-//                         .then(inserted => {
+                        </label>
 
-//                             if (inserted.insertedId) {
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Review</span>
+                        </label>
 
-//                                 toast.success('Review added successfully')
+                        <textarea
+                            {...register("review", {
+                                required: {
+                                    value: true,
+                                    message: 'Review is Required'
+                                },
 
-//                                 reset();
-//                             }
+                            })}
+                            type="review"
+                            placeholder="Enter your review"
+                            className="input input-bordered" />
 
-//                             else {
-//                                 toast.error('Failed to add the review');
-//                             }
-//                         })
+                        <label className="label">
+                            {errors.review?.type === 'required' && <span className="label-text-alt text-warning">{errors.review?.message}</span>}
 
-//                 }
-//             })
+                        </label>
 
-//     };
+                    </div>
+                    <div className="form-control">
 
-//     return (
-//         <div className='bg-[#677E81] py-10 h-screen'>
-//             <h1 className='text-2xl text-center text-white mb-3 uppercase'>Please add a review </h1>
-//             <div className='w-[30%] mx-auto card shadow-2xl border md:p-10 p-3'>
-//                 <form onSubmit={handleSubmit(onSubmit)}>
+                        <label className="label">
+                            <span className="label-text text-white font-semibold">Ratings</span>
+                        </label>
 
-//                     <div className="form-control">
-//                         <label className="label">
-//                             <span className="label-text text-white font-semibold">Name</span>
-//                         </label>
-//                         <input
-//                             {...register("name", {
-//                                 required: {
-//                                     value: true,
-//                                     message: 'Name is Required'
-//                                 },
+                        <input
+                            {...register("ratings", {
+                                required: {
+                                    value: true,
+                                    message: 'Ratings is Required'
+                                },
 
-//                             })}
-//                             type="name"
-//                             placeholder="Enter your name"
-//                             className="input input-bordered" />
+                            })}
+                            type="number"
+                            placeholder="Enter your ratings"
+                            className="input input-bordered" />
 
-//                         <label className="label">
-//                             {errors.name?.type === 'required' && <span className="label-text-alt text-warning">{errors.name?.message}</span>}
+                        <label className="label">
+                            {errors.ratings?.type === 'required' && <span className="label-text-alt text-warning">{errors.ratings?.message}</span>}
 
-//                         </label>
+                        </label>
 
-//                     </div>
-//                     <div className="form-control">
-//                         <label className="label">
-//                             <span className="label-text text-white font-semibold">Review</span>
-//                         </label>
+                    </div>
 
-//                         <textarea
-//                             {...register("review", {
-//                                 required: {
-//                                     value: true,
-//                                     message: 'Review is Required'
-//                                 },
+                    <div className="avatar">
+                        <div className="w-16 rounded-full">
+                            <img src={user.photoURL} />
+                        </div>
+                    </div>
 
-//                             })}
-//                             type="review"
-//                             placeholder="Enter your review"
-//                             className="input input-bordered" />
+                    <div className='text-center'>
+                        <input type="Submit" value='add' className="btn text-white px-12 rounded-full" />
+                    </div>
+                </form>
+            </div>
 
-//                         <label className="label">
-//                             {errors.review?.type === 'required' && <span className="label-text-alt text-warning">{errors.review?.message}</span>}
+        </div>
+    )
+};
 
-//                         </label>
-
-//                     </div>
-//                     <div className="form-control">
-
-//                         <label className="label">
-//                             <span className="label-text text-white font-semibold">Ratings</span>
-//                         </label>
-
-//                         <input
-//                             {...register("ratings", {
-//                                 required: {
-//                                     value: true,
-//                                     message: 'Ratings is Required'
-//                                 },
-
-//                             })}
-//                             type="number"
-//                             placeholder="Enter your ratings"
-//                             className="input input-bordered" />
-
-//                         <label className="label">
-//                             {errors.ratings?.type === 'required' && <span className="label-text-alt text-warning">{errors.ratings?.message}</span>}
-
-//                         </label>
-
-//                     </div>
-
-//                     <div className="avatar">
-//                         <div className="w-24 rounded-full">
-//                             <img src="https://api.lorem.space/image/face?hash=92310" />
-//                         </div>
-//                     </div>
-
-//                     <div className='text-center'>
-//                         <input type="Submit" value='add' className="btn text-white px-12 rounded-full" />
-//                     </div>
-//                 </form>
-//             </div>
-
-//         </div>
-//     );
-// };
-
-// export default AddReview;
+export default AddReview;

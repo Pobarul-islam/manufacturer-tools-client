@@ -38,8 +38,8 @@ const MyOrders = () => {
                             orders.map((order, index) => <tr key={order._id}>
                                 <td>{index + 1}</td>
                                 <td>
-                                    <div class="avatar">
-                                        <div class="w-16 rounded-xl">
+                                    <div className="avatar">
+                                        <div className="w-16 rounded-xl">
                                             <img src={order.image} />
                                         </div>
                                     </div>
