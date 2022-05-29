@@ -9,7 +9,7 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-        <div className='mt-20'>
+        <div className='mt-20 '>
             <h2 className='text-5xl font-bold text-center'>Product</h2>
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                 {
