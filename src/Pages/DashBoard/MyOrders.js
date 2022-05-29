@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/Orders`)
+        fetch(`https://salty-oasis-53034.herokuapp.com/Orders`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const deleteOrder = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/Order/${id}`, {
+        fetch(`https://salty-oasis-53034.herokuapp.com/Order/${id}`, {
             method: 'delete'
         })
             .then(res => res.json())

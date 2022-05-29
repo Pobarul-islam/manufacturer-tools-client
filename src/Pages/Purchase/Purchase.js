@@ -7,7 +7,7 @@ const Purchase = () => {
     const { id } = useParams();
     const [products, setProducts] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/tools/${id}`)
+        fetch(`https://salty-oasis-53034.herokuapp.com/tools/${id}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

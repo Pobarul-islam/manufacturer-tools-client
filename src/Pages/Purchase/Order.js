@@ -23,7 +23,7 @@ const Order = ({ product, show, setShow }) => {
         const totalPrice = parseInt(product.PerPrice) * quantity
         const image = product.img
         setError('')
-        fetch('http://localhost:5000/order/', {
+        fetch('https://salty-oasis-53034.herokuapp.com/order/', {
             method: 'Post',
             headers: {
                 'content-type': 'application/json',

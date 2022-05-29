@@ -4,7 +4,7 @@ import ProductTools from './ProductTools';
 const Tools = () => {
     const [tools, setTools] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://salty-oasis-53034.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => { console.log(data); setTools(data) })
 

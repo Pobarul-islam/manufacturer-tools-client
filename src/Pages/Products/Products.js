@@ -4,7 +4,7 @@ import Product from './Product';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://salty-oasis-53034.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
