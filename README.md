@@ -8,6 +8,26 @@ In the project directory, you can run:
 
 ### `npm start`
 
+
+# React library: Version 18.0.0
+## React Firebase hooks
+# React Router: Version 6.0
+# React BootStrap: Version 2.3.1
+# React Toast
+# Mongodb
+# Node.js
+# Express js
+# Firebase Authentication
+# React hook form
+# React query
+
+
+# Server site link: https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Pobarul-islam
+
+# Client site link: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-Pobarul-islam.git
+
+# Live Site Link: https://endearing-crepe-b6f8b3.netlify.app/
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
