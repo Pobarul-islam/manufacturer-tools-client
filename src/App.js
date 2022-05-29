@@ -15,6 +15,8 @@ import MyProfile from './Pages/DashBoard/MyProfile';
 import Blogs from './Blogs/Blogs';
 import Addproduct from './Pages/AddProduct/AddProduct';
 import AddProduct from './Pages/DashBoard/AddProduct';
+import Portfolio from './Pages/Portfolio/Portfolio';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -50,8 +52,10 @@ function App() {
             <Addproduct></Addproduct>
           </RequireAuth>
         }></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path="/login" element={<Login />} />
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
 
 
       </Routes>
