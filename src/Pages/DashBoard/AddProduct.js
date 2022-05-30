@@ -30,7 +30,7 @@ const AddProduct = () => {
                     const description = data.description
                     const newProduct = { name, PerPrice, MinimumOrder, Available, img, description }
                     console.log(newProduct)
-                    fetch('https://salty-oasis-53034.herokuapp.com/tools', {
+                    fetch('http://localhost:5000/tools', {
                         method: "Post",
                         headers: {
                             'content-type': 'application/json',
@@ -48,7 +48,7 @@ const AddProduct = () => {
     }
     return (
         <div className='w-full'>
-            <div className={`hero h-screen bg-base-200`}>
+            <div className={`hero h-screen `}>
                 <button>Close</button>
                 <div style={{ width: '100%' }} className="hero-content">
 

@@ -4,12 +4,12 @@ import Product from './Product';
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://salty-oasis-53034.herokuapp.com/tools')
+        fetch('http://localhost:5000/tools')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
     return (
-        <div className='mt-20 '>
+        <div className='mt-20 grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2'>
             <h2 className='text-5xl font-bold text-center'>Product</h2>
             <div className='grid lg:grid-cols-3 grid-cols-1 gap-5'>
                 {

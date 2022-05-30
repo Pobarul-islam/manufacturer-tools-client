@@ -3,22 +3,22 @@ import React, { useEffect, useState } from 'react';
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
     useEffect(() => {
-        fetch(`https://salty-oasis-53034.herokuapp.com/Orders`)
+        fetch(`http://localhost:5000/Orders`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
     const deleteOrder = (id) => {
         console.log(id)
-        fetch(`https://salty-oasis-53034.herokuapp.com/Order/${id}`, {
+        fetch(`http://localhost:5000/tools/Order/${id}`, {
             method: 'delete'
         })
             .then(res => res.json())
             .then(data => console.log(data))
     }
     return (
-        <div>
-            <div className="overflow-x-auto">
-                <table className="table w-full">
+        <div className='grid p-10 '>
+            <div className="overflow-x-auto grid  ">
+                <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
@@ -49,8 +49,8 @@ const MyOrders = () => {
                                 <td>{order.price}</td>
                                 <td>{order.totalPrice}</td>
                                 <td>
-                                    <button className='btn btn-primary'>Pay</button>
-                                    <button onClick={() => deleteOrder(order._id)} className='btn btn-error'>Delete</button>
+                                    <button className='btn mr-3 btn-primary'>Pay</button>
+                                    <button onClick={() => deleteOrder(order._id)} className='btn ml-2 btn-error'>Delete</button>
                                 </td>
 
                             </tr>)

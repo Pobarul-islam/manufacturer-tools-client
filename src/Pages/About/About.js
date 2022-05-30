@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className='container mx-auto mt-10 card shadow-xl'>
+        <div className='container mx-auto mt-10 card shadow-xl p-10'>
             <h1 className="text-4xl">About Us</h1>
 
             National Tools Industries

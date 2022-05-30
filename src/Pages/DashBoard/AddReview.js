@@ -5,13 +5,13 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 const AddReview = () => {
-    const [user, loading] = useAuthState(auth)
+    const [user, Loading] = useAuthState(auth)
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const onSubmit = async (data) => {
         const image = user.photoURL
         const ratingData = { ...data, image }
-        fetch('https://salty-oasis-53034.herokuapp.com/review', {
+        fetch('http://localhost:5000/review', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -24,9 +24,9 @@ const AddReview = () => {
 
     };
     return (
-        <div className='bg-[#677E81] py-10 h-screen'>
+        <div className=' py-10 h-screen '>
             <h1 className='text-2xl text-center text-white mb-3 uppercase'>Please add a review </h1>
-            <div className='w-[30%] mx-auto card shadow-2xl border md:p-10 p-3'>
+            <div className='w-[30%] mx-auto card shadow-2xl border sm:w-full md:p-10 p-3'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-control">

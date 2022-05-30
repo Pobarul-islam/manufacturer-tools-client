@@ -3,13 +3,9 @@ import Products from '../Products/Products';
 import Banner from './Banner';
 import Footer from './Footer';
 import Info from './Info';
-
-
-// import ProducTools from './ProductTools';
-
-import Review from './Review';
 import Summary from './Summary';
-// import Tools from './Tools';
+
+
 
 
 const Home = () => {
@@ -20,11 +16,6 @@ const Home = () => {
             <Info></Info>
             <Products></Products>
             <Summary />
-
-
-
-            {/* <Tools></Tools>
-            <ProducTools></ProducTools> */}
 
             <Footer></Footer>
         </div>

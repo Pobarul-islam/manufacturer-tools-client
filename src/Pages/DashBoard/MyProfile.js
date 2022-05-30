@@ -11,7 +11,7 @@ const Profile = () => {
     const [edit, setEdit] = useState(false)
     const { register, handleSubmit, } = useForm();
     const { isLoading, data, refetch } = useQuery(['Profiles'], () =>
-        fetch(`https://salty-oasis-53034.herokuapp.com/profile/${user.email}`, {
+        fetch(`http://localhost:5000/profile/${user.email}`, {
             method: "get",
             headers: {
                 auth: localStorage.getItem('accessToken')
@@ -26,7 +26,7 @@ const Profile = () => {
         const others = data
         const profileData = { name, email, others }
         console.log(profileData);
-        fetch(`https://salty-oasis-53034.herokuapp.com/profile/${email}`, {
+        fetch(`http://localhost:5000/profile/${email}`, {
             method: "put",
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const Profile = () => {
         return <Loading />
     }
     return (
-        <div className='p-3 w-full'>
+        <div className='p-3 w-full grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="avatar">
                     <div className="w-24 rounded-full">

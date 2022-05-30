@@ -45,7 +45,7 @@ const AddParts = () => {
 
                     }
 
-                    const url = `   https://evening-temple-70912.herokuapp.com/parts`;
+                    const url = `http://localhost:5000/tools/parts`;
                     fetch(url, {
 
                         method: 'POST',
