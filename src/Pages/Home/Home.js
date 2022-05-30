@@ -3,6 +3,8 @@ import Products from '../Products/Products';
 import Banner from './Banner';
 import Footer from './Footer';
 import Info from './Info';
+// import Summary form './Summary';
+
 // import ProducTools from './ProductTools';
 
 import Review from './Review';
@@ -14,12 +16,14 @@ const Home = () => {
         <div className='px-12 w-full'>
             <Banner></Banner>
             <Info></Info>
-            <Review></Review>
             <Products></Products>
+           {/* <Summary/> */}
+           
+             
 
             {/* <Tools></Tools>
             <ProducTools></ProducTools> */}
-
+         
             <Footer></Footer>
         </div>
     );

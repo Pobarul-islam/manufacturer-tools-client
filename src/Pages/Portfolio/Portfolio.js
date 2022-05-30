@@ -21,14 +21,14 @@ const Portfolio = () => {
                             </div>
                             <div className='my-5'>
                                 <h5 className='font-semibold underline text-black'>Education</h5>
-                                <p><span className='font-semibold'>(B.Sc.):</span> Business Studies –20196(Passing year-2018)</p>
+                                <p><span className='font-semibold'></span> Business Studies –2019-(Continue)</p>
 
-                                <p className='font-semibold'>Thakurgaon Gov't collegt,Thakurgaon, Bangladesh</p>
+                                <p className='font-semibold'>Thakurgaon Gov't college,Thakurgaon, Bangladesh</p>
                             </div>
 
                             <div>
                                 <h5 className='font-semibold underline text-black'>Skill Highlights</h5>
-                                <p><span className='font-semibold'>Expertise:</span> JavaScript, ES6, REST API, React, React Router, React Hook, SPA, HTML5, CSS3, SCSS,Bootstrap-5.</p>
+                                <p><span className='font-semibold'>Expertise:</span> JavaScript, ES6, REST API, React, React Router, React Hook, SPA, HTML5, CSS3, SCSS,Bootstrap-5, Python.</p>
                                 <p><span className='font-semibold'>Comfortable:</span> Node.js, MongoDB, Firebase, Express.js</p>
                                 <p><span className='font-semibold'>Tools:</span> GitHub, VS Code, Chrome Dev Tools, Heroku, Netlify, Photoshop, Figma</p>
                                 <p><span className='font-semibold'>Personal Skills:</span> Leadership, Project Management, Team Work, Organizing, Negotiation</p>

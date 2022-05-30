@@ -2,24 +2,30 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div className='container mx-auto mt-10'>
+        <div className='container mx-auto mt-10 card shadow-xl'>
             <h1 className="text-4xl">About Us</h1>
 
-            <p className='mb-3 mt-9'>
-                MT-Bike's-Accesories.com is a new breed of motorcycle community. Providing the best experience of today's online shopping mall enhanced with useful features and categories tailored to motorcycle enthusiasts of all types, MT-Bike's-Accesories.com is an open platform for the exchange of everything related to motorcycle.
+           National Tools Industries
+
+           <p>
+                       Established in the year 2004, National Tools Industries has successfully created a market by providing excellent quality products. We are based out s a Sole Proprietorship firm and we have situated our operational head at Kolkata, West Bengal (India). We are betrothed in manufacturing and supplying wide range of Multi Cavity Molding Die, Zinc Die Casting Mold, Aluminium Die Casting Mold, Pressure Die Casting Mold and many more. Additionally, Our well-installed infrastructural facilities help us to deliver these products as per the market requirements and customer’s demands. Our brilliant and enthusiastic professionals fulfil the needs and necessities of the customers in an effectual way. Apart from, we also deliver these products at market leading prices. Our experts carry rich experience and wide knowledge about the domain. Our quality analysts check the products on different quality parameters to assure flawless products from our end. The products are provided in a timely manner with an aim to uphold cordial relation with them.
+           </p>
+        
+
+ 
+            <p>
+                
+                        Under the esteemed supervision of Mr. Dipak Dasgupta (Proprietor), our company National Tools Industries has created a renowned position in the market. With his immense management skills, he manages and directs the activities of the organization in a fruitful manner.
             </p>
-            <p className='mb-3'>
-                The MT-Bike's-Accesories.com team is made up of passionate motorcyclists with a lust for technology. Both having unlimited power to enrich our lives, there was never a question as to whether or not it makes sense to combine our love of motorcycles with technology.
+
+ 
+
+            <p>
+                We have a team of skillful experts which is the backbone of the association. These professionals have vast industry experience and deep information in this domain. Our professionals work with enthusiasm to deliver the best products to our customers. To boost knowledge of our professionals, our organization conducts the several training and workshops at regular intervals.
             </p>
-            <p className='mb-3'>
-                At the heart of MT-Bike's-Accesories.com is a platform developed from the ground up to provide a community environment where the spread of daily maintenance needs, upgrades, gears and accessories, useful informational support, integration ideas and technological knowledge sharing is paramount. The spirit of MT-Bike's-Accesories.com lives in the community, so making connections with other like-minded riders is easy and the more you interact, the more that wealth of information, integration, ideas and knowledge grows and becomes more and more relevant to your own interests.
-            </p>
-            <p className='mb-3'>
-                You don't have to buy anything to enjoy MT-Bike's-Accesories.com, but we do encourage participation from everyone and know that you'll get more out of the experience if you do.
-            </p>
-            <p className='mb-3'>
-                You don't have to own or even ride a motorcycle to participate in MT-Bike's-Accesories.com, but of course we advocate that everyone should get out there and do it. You know when you want to and it's always everything you think
-            </p>
+
+
+           
             <p>Vision</p>
             <p className='my-3'>A united, integrated, enlightened, passionate, empowered and liberated community of motorcyclists – basically a Republic of Bikers</p>
             <p>Mission</p>

@@ -1,31 +1,32 @@
 import React from 'react';
 
+
+
 const Banner = () => {
     return (
-        <div className="hero min-h-screen">
-            <div style={{ height: "500px" }} className="carousel">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/cvZ1KnN/slider-3.webp" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
+        <div className=' pt-12'>
+            <div className="carousel w-full">
+                <div id="item1" className="carousel-item w-full">
+                    <img src='https://i.ibb.co/7tSrSRM/2.png' className="w-[1250px] mx-auto rounded-xl" alt='' />
                 </div>
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/cvZ1KnN/slider-3.webp" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
+                <div id="item2" className="carousel-item w-full">
+                    <img src='https://i.ibb.co/Dks4MKP/3.png' className="w-[1250px] mx-auto rounded-xl" alt='' />
                 </div>
-                <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://i.ibb.co/cvZ1KnN/slider-3.webp" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
+                <div id="item3" className="carousel-item w-full">
+                    <img src='https://i.ibb.co/12ry96N/4.png' className="w-[1250px] mx-auto rounded-xl" alt='' />
                 </div>
+                <div id="item4" className="carousel-item w-full">
+                    <img src='https://i.ibb.co/519GKPR/1.png' className="w-[1250px] mx-auto rounded-xl" alt='' />
+                </div>
+               
+            </div>
+            <div className="flex justify-center w-full py-2 gap-2">
+                <a href="#item1" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">1</a>
 
+                <a href="#item2" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">2</a>
+                <a href="#item3" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">3</a>
+                <a href="#item4" className="text-center text-white text-xl bg-primary leading-tight z-10 rounded-full w-8  h-8 border-2 border-primary cursor-pointer hover:ring hover:ring-offset-2 duration-500 ring-primary">4</a>
+            
             </div>
         </div>
     );
