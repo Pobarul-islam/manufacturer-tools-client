@@ -8,7 +8,9 @@ const SummaryCard = ({ summary }) => {
     const { name, icon, quantity } = summary;
 
     return (
+
         <div>
+
             <div>
                 <div className="card shadow-xl border ">
 
