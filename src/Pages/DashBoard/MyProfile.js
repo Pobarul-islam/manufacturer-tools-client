@@ -74,7 +74,7 @@ const Profile = () => {
                         disabled={!edit} className={`${edit && "border"} w-full p-2 my-3`} />
                 </div>
                 <p className="font-bold mt-4">Skills</p>
-                <div className={`${edit || data.others ? "sdsd" : "hidden"} links mt-4 grid grid-cols-2 lg:grid-cols-4`}>
+                <div className={`${edit ? "sdsd" : "hidden"} links mt-4 grid grid-cols-2 lg:grid-cols-4`}>
                     <input type="text "  {...register("skill1", { value: data?.others?.skill1 })} disabled={!edit} className={`${edit && "border"} p-2 mt-3`} />
                     <input type="text "  {...register("skill2", { value: data?.others?.skill2 })} disabled={!edit} className={`${edit && "border"} p-2 mt-3`} />
                     <input type="text "  {...register("skill3", { value: data?.others?.skill3 })} disabled={!edit} className={`${edit && "border"} p-2 mt-3`} />
