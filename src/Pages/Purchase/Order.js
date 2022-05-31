@@ -23,20 +23,25 @@ const Order = ({ product, show, setShow }) => {
         const totalPrice = parseInt(product.PerPrice) * quantity
         const image = product.img
         setError('')
-        fetch('http://localhost:5000/tools', {
-            method: 'Post',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({ email, name, totalPrice: totalPrice, price: product.PerPrice, quantity, image, phone })
-        })
-            .then(res => {
-                console.log(res)
-                setLoading(false)
-                reset()
-                toast.success('Order Submited')
-                setShow(false)
+        if (quantity >= product.Avaiable) {
+            fetch('https://salty-oasis-53034.herokuapp.com/tools', {
+                method: 'Post',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify({ email, name, totalPrice: totalPrice, price: product.PerPrice, quantity, image, phone })
             })
+                .then(res => {
+                    console.log(res)
+                    setLoading(false)
+                    reset()
+                    toast.success('Order Submited')
+                    setShow(false)
+                })
+        }
+        else {
+            alert('Message')
+        }
     }
 
     if (userLoading) {

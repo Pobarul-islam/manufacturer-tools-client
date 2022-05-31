@@ -45,7 +45,7 @@ const AddParts = () => {
 
                     }
 
-                    const url = `http://localhost:5000/tools/parts`;
+                    const url = `https://salty-oasis-53034.herokuapp.com/tools/parts`;
                     fetch(url, {
 
                         method: 'POST',

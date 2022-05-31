@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
+    const [deleteor, setDeleteo] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/Orders`)
+        fetch(`https://salty-oasis-53034.herokuapp.com/Orders`)
             .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [])
+            .then(data => {
+                setOrders(data)
+                toast.success('Order Added Success')
+            })
+    }, [deleteor])
     const deleteOrder = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/tools/Order/${id}`, {
+        fetch(`https://salty-oasis-53034.herokuapp.com/Order/${id}`, {
             method: 'delete'
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setDeleteo(data))
     }
+    console.log(orders)
     return (
         <div className='grid p-10 '>
             <div className="overflow-x-auto grid  ">

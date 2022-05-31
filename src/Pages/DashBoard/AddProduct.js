@@ -30,7 +30,7 @@ const AddProduct = () => {
                     const description = data.description
                     const newProduct = { name, PerPrice, MinimumOrder, Available, img, description }
                     console.log(newProduct)
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://salty-oasis-53034.herokuapp.com/tools', {
                         method: "Post",
                         headers: {
                             'content-type': 'application/json',

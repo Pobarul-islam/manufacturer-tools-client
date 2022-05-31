@@ -17,6 +17,9 @@ import Addproduct from './Pages/AddProduct/AddProduct';
 import AddProduct from './Pages/DashBoard/AddProduct';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import NotFound from './Pages/Shared/NotFound';
+import AllProduct from './Pages/AllProduct/AllProduct';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -24,11 +27,11 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path='/allproduct' element={<AllProduct></AllProduct>}></Route>
 
 
         <Route path='/purchase/:id' element={
-
           <RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>
@@ -59,6 +62,7 @@ function App() {
 
 
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

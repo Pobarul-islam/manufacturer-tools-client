@@ -28,7 +28,7 @@ const PurchasePage = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/tools/${id}`)
+        fetch(`https://salty-oasis-53034.herokuapp.com/userdetails/${id}`)
 
             .then(res => res.json())
             .then(data => setPart(data))
@@ -53,7 +53,7 @@ const PurchasePage = () => {
 
 
 
-        fetch('http://localhost:5000/tools', {
+        fetch('https://salty-oasis-53034.herokuapp.com/tools', {
 
             method: 'POST',
             headers: {
