@@ -20,6 +20,7 @@ import NotFound from './Pages/Shared/NotFound';
 import AllProduct from './Pages/AllProduct/AllProduct';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='add-product' element={<AddProduct />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
 
         </Route>
 
