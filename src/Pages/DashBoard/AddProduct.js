@@ -47,7 +47,7 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className='w-full'>
+        <div className=''>
             <div className={`hero h-screen `}>
                 <button>Close</button>
                 <div style={{ width: '100%' }} className="hero-content">

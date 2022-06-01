@@ -24,7 +24,7 @@ const AddReview = () => {
 
     };
     return (
-        <div className=' py-10 h-screen '>
+        <div className=' py-10 h-screen w-96 mx-auto'>
             <h1 className='text-2xl text-center text-white mb-3 uppercase'>Please add a review </h1>
             <div className='w-[30%] mx-auto card shadow-2xl border sm:w-full md:p-10 p-3'>
                 <form onSubmit={handleSubmit(onSubmit)}>

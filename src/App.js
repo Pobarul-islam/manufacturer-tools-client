@@ -42,14 +42,16 @@ function App() {
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>
-        }>
-          <Route path='orders' element={<MyOrders></MyOrders>}></Route>
-          <Route path='review' element={<AddReview></AddReview>}></Route>
-          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='add-product' element={<AddProduct />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
 
+        }>
+
+          <Route path='/dashboard/orders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='/dashboard/review' element={<AddReview></AddReview>}></Route>
+          <Route path='/dashboard/profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/add-product' element={<AddProduct />}></Route>
         </Route>
+
+        <Route path='/contact' element={<Contact />}></Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/addproduct' element={
